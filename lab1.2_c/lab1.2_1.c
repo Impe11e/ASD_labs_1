@@ -9,6 +9,7 @@ int main() {
     double degree = 1.0;
     int counter = 0;
 
+
     printf("Enter value of 'n': ");
     scanf("%d", &n);
 

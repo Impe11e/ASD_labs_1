@@ -22,7 +22,7 @@ int main() {
     {2, 7, -3, 14, -5, -16, 17, 8, 1, -10},
     {0, 9, 3, 3, 3, 2, 1, 0, 8, 6},
     {-5, 2, -34, 1, 1, 5, -8, 13, 1, -4},
-    {10, 5, -3, 7, 1, 10, -1, -8, 9, 7}
+    {10, 5, -3, 20, 1, 10, -1, -8, 9, 7}
     };
 
     printf("The matrix has the form:\n");
@@ -31,11 +31,12 @@ int main() {
     for (int i = 3; i < cols; i += 2) {
         int temp = matrix[first_row][i];
         int j = 1;
-        while (j < cols && matrix[first_row][j] < temp) {
+        while (j < cols && matrix[first_row][j] < temp)
+        {
             j += 2;
         }
         for (int k = i; k > 0 && matrix[first_row][k - 2] > temp; k -= 2) {
-        matrix[first_row][k] = matrix[first_row][k - 2];
+            matrix[first_row][k] = matrix[first_row][k - 2];
         }
 
         matrix[first_row][j] = temp;
